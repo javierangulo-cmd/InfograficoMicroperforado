@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Infografía: Proceso de Reembolso Microperforado - Mercadotecnia</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Inter & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              blue: '#374296',      // Exact SaleVale Navy/Indigo
+              blueDark: '#262F70',
+              blueLight: '#EEF0FA',
+              green: '#56B13E',     // Exact SaleVale Bright Green
+              greenDark: '#418B2C',
+              greenLight: '#EBF7E7',
+              grayBg: '#F8FAFC'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Outfit', 'sans-serif']
+          },
+          boxShadow: {
+            'custom': '0 10px 25px -5px rgba(55, 66, 150, 0.08), 0 8px 10px -6px rgba(55, 66, 150, 0.04)',
+            'card-hover': '0 20px 30px -10px rgba(55, 66, 150, 0.15)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      background-color: #F1F5F9;
+    }
+    .font-display {
+      font-family: 'Outfit', sans-serif;
+    }
+    @media print {
+      body {
+        background-color: #FFFFFF !important;
+        padding: 0 !important;
+      }
+      .no-print {
+        display: none !important;
+      }
+      .page-break {
+        page-break-after: always;
+      }
+      .shadow-custom, .shadow-xl, .shadow-lg {
+        box-shadow: none !important;
+        border: 1px solid #E2E8F0 !important;
+      }
+    }
+    /* Flow timeline connector line */
+    .timeline-line {
+      position: absolute;
+      top: 52px;
+      left: 28px;
+      bottom: 20px;
+      width: 4px;
+      background: linear-gradient(to bottom, #374296, #56B13E);
+      z-index: 1;
+    }
+    @media (min-width: 1024px) {
+      .timeline-horizontal-line {
+        position: absolute;
+        top: 48px;
+        left: 10%;
+        right: 10%;
+        height: 4px;
+        background: linear-gradient(to right, #374296, #56B13E, #374296, #56B13E);
+        z-index: 0;
+      }
+    }
+  </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen py-6 sm:py-10 px-3 sm:px-6">
+
+  <!-- Main Container -->
+  <div class="max-w-5xl mx-auto bg-white rounded-3xl shadow-custom border border-slate-200/80 overflow-hidden">
+
+    <!-- Top Action Bar (Buttons) -->
+    <div class="no-print bg-slate-900 text-white px-6 py-2.5 flex flex-wrap items-center justify-between gap-3 text-xs sm:text-sm">
+      <div class="flex items-center gap-2">
+        <span class="inline-block w-2.5 h-2.5 rounded-full bg-brand-green animate-pulse"></span>
+        <span class="font-medium tracking-wide">Manual Operativo • Mercadotecnia & Administración</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <button onclick="window.print()" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 transition-all font-medium text-xs">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/></svg>
+          Imprimir / Guardar PDF
+        </button>
+      </div>
+    </div>
+
+    <!-- Brand Header -->
+    <header class="p-6 sm:p-10 border-b border-slate-100 bg-gradient-to-b from-slate-50/70 to-white">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        
+        <!-- Logo Recreated with exact Brand Identity & Geometry -->
+        <div class="flex items-center gap-4">
+          <div class="flex items-center gap-3">
+            <!-- Smartphone Graphic Icon -->
+            <div class="w-12 h-20 sm:w-14 sm:h-24 bg-brand-blue rounded-xl p-1 shadow-md flex flex-col justify-between shrink-0">
+              <div class="w-full flex justify-center py-0.5">
+                <div class="w-4 h-1 bg-white/40 rounded-full"></div>
+              </div>
+              <div class="w-full h-full bg-brand-green rounded-md flex items-center justify-center relative overflow-hidden">
+                <!-- Chat Bubble with Dollar -->
+                <div class="bg-white rounded-full p-1.5 sm:p-2 shadow-sm flex items-center justify-center transform -rotate-3">
+                  <span class="text-brand-blue font-black text-sm sm:text-base leading-none">$</span>
+                </div>
+              </div>
+              <div class="w-full flex justify-center py-0.5">
+                <div class="w-2 h-2 rounded-full border border-white/60"></div>
+              </div>
+            </div>
+
+            <!-- Typography Wordmark -->
+            <div>
+              <div class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight font-display flex items-baseline">
+                <span class="text-brand-blue">Sale</span>
+                <span class="text-brand-green ml-0.5">vale</span>
+              </div>
+              <!-- Divider line & Slogan -->
+              <div class="w-full h-1 bg-brand-green rounded-full my-1"></div>
+              <div class="text-brand-blue font-bold tracking-tight text-lg sm:text-xl font-display flex items-center gap-1">
+                <span>lo vale.</span>
+                <span class="text-[9px] align-super border border-brand-blue/60 rounded-full px-0.5 py-0.2">®</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Header Titles -->
+        <div class="text-center md:text-right">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-blueLight text-brand-blue font-bold text-xs uppercase tracking-wider mb-2">
+            <span class="w-2 h-2 rounded-full bg-brand-blue"></span>
+            Guía Oficial para Gerentes de Sucursal
+          </div>
+          <h1 class="text-2xl sm:text-3xl font-extrabold text-slate-900 font-display leading-tight">
+            Proceso de Reembolso: <span class="text-brand-blue">Microperforado</span>
+          </h1>
+          <p class="text-slate-500 text-xs sm:text-sm mt-1 max-w-md">
+            Departamento de Mercadotecnia & Operaciones Administrativas
+          </p>
+        </div>
+      </div>
+
+      <!-- Objective Highlight Banner -->
+      <div class="mt-8 bg-gradient-to-r from-brand-blueLight via-white to-brand-greenLight rounded-2xl p-4 sm:p-5 border border-slate-200 flex items-start gap-4">
+        <div class="w-10 h-10 rounded-xl bg-brand-blue text-white flex items-center justify-center shrink-0 shadow-sm mt-0.5">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        </div>
+        <div class="w-full">
+          <h3 class="font-bold text-slate-900 text-sm sm:text-base font-display">Objetivo del Procedimiento</h3>
+          <p class="text-slate-600 text-xs sm:text-sm mt-0.5 leading-relaxed">
+            Establecer con claridad el flujo de trabajo, los responsables, la documentación obligatoria y los tiempos de dispersión para la colocación e instalación de microperforados en sucursales, garantizando agilidad y transparencia financiera.
+          </p>
+
+          <!-- Nota Importante: Presupuesto Tope -->
+          <div class="mt-3.5 flex items-center gap-3 p-3 bg-amber-500/10 border-2 border-amber-500/40 rounded-xl text-amber-900">
+            <span class="flex h-7 w-7 items-center justify-center rounded-lg bg-amber-500 text-white font-bold text-sm shrink-0">!</span>
+            <div class="text-xs sm:text-sm">
+              <strong class="font-black text-amber-950 uppercase tracking-wide">Nota Importante:</strong>
+              <span class="ml-1 text-slate-800 font-medium">El presupuesto tope autorizado para la instalación es de <strong class="text-brand-blue font-extrabold text-sm sm:text-base underline decoration-brand-green">$3,000 MXN</strong> con impuestos incluidos.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Process Steps Section -->
+    <main class="p-6 sm:p-10 bg-slate-50/50">
+      
+      <!-- Interactive Modality Selector (Reembolso vs Anticipo) -->
+      <div class="text-center max-w-2xl mx-auto mb-8">
+        <span class="text-brand-green font-bold text-xs uppercase tracking-widest">Modalidades Disponibles</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 font-display mt-1">
+          Flujo Operativo de Sucursal
+        </h2>
+        <p class="text-slate-500 text-xs sm:text-sm mt-1">
+          Selecciona la vía asignada para tu trámite y sigue la secuencia de 4 pasos.
+        </p>
+
+        <!-- Toggle Pill Buttons -->
+        <div class="no-print mt-6 inline-flex p-1.5 bg-slate-200/80 rounded-2xl gap-2 shadow-inner border border-slate-300">
+          <button id="btnTabReembolso" onclick="switchModality('reembolso')" class="px-5 py-2.5 rounded-xl font-display font-bold text-xs sm:text-sm transition-all shadow-sm bg-brand-blue text-white">
+            Opción 1: Reembolso Posterior
+          </button>
+          <button id="btnTabAnticipo" onclick="switchModality('anticipo')" class="px-5 py-2.5 rounded-xl font-display font-bold text-xs sm:text-sm transition-all text-slate-700 hover:text-slate-900">
+            Opción 2: Anticipo - Comprobación
+          </button>
+        </div>
+      </div>
+
+      <!-- MODALITY 1: REEMBOLSO -->
+      <div id="flowReembolso" class="flow-container">
+        <div class="flex items-center gap-2 mb-6">
+          <span class="w-3 h-3 rounded-full bg-brand-blue"></span>
+          <h3 class="font-display font-extrabold text-lg sm:text-xl text-slate-900">
+            Flujo de 4 Pasos para tu <span class="text-brand-blue">Reembolso</span>
+          </h3>
+          <span class="text-xs bg-brand-blueLight text-brand-blue px-2.5 py-0.5 rounded-full font-bold ml-auto">Pago realizado por Gerente</span>
+        </div>
+
+        <!-- Steps Grid Reembolso -->
+        <div class="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+          <!-- STEP 1 -->
+          <div class="group bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-card-hover transition-all duration-300 relative flex flex-col justify-between">
+            <div class="absolute -top-3 left-6 px-3 py-0.5 bg-brand-blue text-white text-xs font-bold rounded-full uppercase tracking-wider shadow">
+              Paso 01
+            </div>
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-brand-blueLight text-brand-blue flex items-center justify-center mb-4 mt-2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+              </div>
+              <h4 class="text-lg font-bold text-slate-900 font-display">Validación de Mercadotecnia</h4>
+              <span class="inline-block text-[11px] font-semibold text-brand-blue bg-brand-blueLight px-2 py-0.5 rounded-md mt-1 mb-3">
+                Responsable: Gerente & MKT
+              </span>
+              <p class="text-slate-600 text-xs leading-relaxed">
+                Se debe compartir la <strong>cotización</strong> con el <strong>monto total e impuestos desglosados</strong> a las encargadas de MKT para su formal autorización previa.
+              </p>
+            </div>
+            
+            <div class="mt-5 pt-4 border-t border-slate-100 flex items-center gap-2 text-[11px] font-medium text-amber-800 bg-amber-50 rounded-lg p-2.5">
+              <svg class="w-4 h-4 shrink-0 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+              <span>Tope máximo: $3,000 con impuestos.</span>
+            </div>
+          </div>
+
+          <!-- STEP 2 -->
+          <div class="group bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-card-hover transition-all duration-300 relative flex flex-col justify-between">
+            <div class="absolute -top-3 left-6 px-3 py-0.5 bg-brand-green text-white text-xs font-bold rounded-full uppercase tracking-wider shadow">
+              Paso 02
+            </div>
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-brand-greenLight text-brand-green flex items-center justify-center mb-4 mt-2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/></svg>
+              </div>
+              <h4 class="text-lg font-bold text-slate-900 font-display">Pago del Servicio</h4>
+              <span class="inline-block text-[11px] font-semibold text-brand-greenDark bg-brand-greenLight px-2 py-0.5 rounded-md mt-1 mb-3">
+                Responsable: Gerente de Sucursal
+              </span>
+              <p class="text-slate-600 text-xs leading-relaxed">
+                El Gerente realiza el pago correspondiente y solicita de forma obligatoria la factura emitida formalmente a nombre de:
+              </p>
+              <div class="mt-3 p-2 bg-slate-900 text-white rounded-xl text-center shadow-inner">
+                <span class="text-[10px] text-slate-400 block uppercase font-mono tracking-wider">Razón Social Requerida:</span>
+                <span class="text-sm font-black tracking-wider text-green-400 font-mono">SAVAPRE</span>
+              </div>
+            </div>
+            
+            <div class="mt-5 pt-4 border-t border-slate-100 flex items-center gap-2 text-[11px] font-medium text-slate-600 bg-slate-100 rounded-lg p-2.5">
+              <svg class="w-4 h-4 shrink-0 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <span>Sin excepciones de facturación.</span>
+            </div>
+          </div>
+
+          <!-- STEP 3 -->
+          <div class="group bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-card-hover transition-all duration-300 relative flex flex-col justify-between">
+            <div class="absolute -top-3 left-6 px-3 py-0.5 bg-brand-blue text-white text-xs font-bold rounded-full uppercase tracking-wider shadow">
+              Paso 03
+            </div>
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-brand-blueLight text-brand-blue flex items-center justify-center mb-4 mt-2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              </div>
+              <h4 class="text-lg font-bold text-slate-900 font-display">Solicitud de Reembolso</h4>
+              <span class="inline-block text-[11px] font-semibold text-brand-blue bg-brand-blueLight px-2 py-0.5 rounded-md mt-1 mb-3">
+                Responsable: Gerente de Sucursal
+              </span>
+              <p class="text-slate-600 text-xs leading-relaxed">
+                El Gerente comparte vía correo electrónico, <strong>sobre el mismo Vo.Bo. de MKT</strong>, la factura del pago adjuntando ambos archivos:
+              </p>
+              <div class="mt-3 grid grid-cols-2 gap-2 text-center text-xs font-bold">
+                <div class="p-1.5 border border-red-200 bg-red-50 text-red-700 rounded-lg">
+                  📄 PDF
+                </div>
+                <div class="p-1.5 border border-blue-200 bg-blue-50 text-blue-700 rounded-lg">
+                  📑 XML
+                </div>
+              </div>
+            </div>
+            
+            <div class="mt-5 pt-4 border-t border-slate-100 flex items-center gap-2 text-[11px] font-medium text-brand-blue bg-brand-blueLight rounded-lg p-2.5">
+              <svg class="w-4 h-4 shrink-0 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"/></svg>
+              <span>Asunto: Microperforado - &lt;Sucursal&gt;</span>
+            </div>
+          </div>
+
+          <!-- STEP 4 -->
+          <div class="group bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-card-hover transition-all duration-300 relative flex flex-col justify-between">
+            <div class="absolute -top-3 left-6 px-3 py-0.5 bg-brand-green text-white text-xs font-bold rounded-full uppercase tracking-wider shadow">
+              Paso 04
+            </div>
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-brand-greenLight text-brand-green flex items-center justify-center mb-4 mt-2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              </div>
+              <h4 class="text-lg font-bold text-slate-900 font-display">Gestión de Reembolso</h4>
+              <span class="inline-block text-[11px] font-semibold text-brand-greenDark bg-brand-greenLight px-2 py-0.5 rounded-md mt-1 mb-3">
+                Responsable: Administración
+              </span>
+              <p class="text-slate-600 text-xs leading-relaxed">
+                Administrativamente y con la factura validada se realiza el reembolso directo a cuenta de la sucursal/gerente.
+              </p>
+              <div class="mt-3 p-2.5 bg-brand-greenLight border border-brand-green/30 rounded-xl text-center">
+                <span class="text-[10px] text-brand-greenDark block uppercase font-bold tracking-wider">Tiempo Estimado:</span>
+                <span class="text-sm font-extrabold text-brand-greenDark">3 a 4 Días Hábiles</span>
+              </div>
+            </div>
+            
+            <div class="mt-5 pt-4 border-t border-slate-100 flex items-center gap-2 text-[11px] font-medium text-slate-700 bg-slate-100 rounded-lg p-2.5">
+              <svg class="w-4 h-4 shrink-0 text-brand-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+              <span>Días de pago: Lun • Mié • Vie</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- MODALITY 2: ANTICIPO - COMPROBACIÓN -->
+      <div id="flowAnticipo" class="flow-container hidden">
+        <div class="flex items-center gap-2 mb-6">
+          <span class="w-3 h-3 rounded-full bg-brand-green"></span>
+          <h3 class="font-display font-extrabold text-lg sm:text-xl text-slate-900">
+            Flujo de 4 Pasos para tu <span class="text-brand-greenDark">Anticipo-Comprobación</span>
+          </h3>
+          <span class="text-xs bg-brand-greenLight text-brand-greenDark px-2.5 py-0.5 rounded-full font-bold ml-auto">Fondeo previo corporativo</span>
+        </div>
+
+        <!-- Steps Grid Anticipo -->
+        <div class="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+          <!-- STEP 1 ANTICIPO -->
+          <div class="group bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-card-hover transition-all duration-300 relative flex flex-col justify-between">
+            <div class="absolute -top-3 left-6 px-3 py-0.5 bg-brand-blue text-white text-xs font-bold rounded-full uppercase tracking-wider shadow">
+              Paso 01
+            </div>
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-brand-blueLight text-brand-blue flex items-center justify-center mb-4 mt-2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+              </div>
+              <h4 class="text-lg font-bold text-slate-900 font-display">Validación de Mercadotecnia</h4>
+              <span class="inline-block text-[11px] font-semibold text-brand-blue bg-brand-blueLight px-2 py-0.5 rounded-md mt-1 mb-3">
+                Responsable: Gerente & MKT
+              </span>
+              <p class="text-slate-600 text-xs leading-relaxed">
+                Se debe compartir una <strong>Cotización</strong> con el <strong>Monto total e impuesto</strong> a las encargadas de MKT para su autorización formal.
+              </p>
+            </div>
+            
+            <div class="mt-5 pt-4 border-t border-slate-100 flex items-center gap-2 text-[11px] font-medium text-amber-800 bg-amber-50 rounded-lg p-2.5">
+              <svg class="w-4 h-4 shrink-0 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+              <span>Presupuesto tope: $3,000 con impuestos.</span>
+            </div>
+          </div>
+
+          <!-- STEP 2 ANTICIPO -->
+          <div class="group bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-card-hover transition-all duration-300 relative flex flex-col justify-between">
+            <div class="absolute -top-3 left-6 px-3 py-0.5 bg-brand-green text-white text-xs font-bold rounded-full uppercase tracking-wider shadow">
+              Paso 02
+            </div>
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-brand-greenLight text-brand-green flex items-center justify-center mb-4 mt-2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+              </div>
+              <h4 class="text-lg font-bold text-slate-900 font-display">Gestión de Recurso por Anticipo</h4>
+              <span class="inline-block text-[11px] font-semibold text-brand-greenDark bg-brand-greenLight px-2 py-0.5 rounded-md mt-1 mb-3">
+                Responsable: Administración
+              </span>
+              <p class="text-slate-600 text-xs leading-relaxed">
+                Se le depositará el <strong>monto autorizado al Gerente</strong> de la sucursal, el cual pudiera tardar entre <strong>3 a 4 días</strong> dependiendo de los días de pago corporativo.
+              </p>
+              <div class="mt-3 p-2 bg-brand-blueLight border border-brand-blue/20 rounded-xl text-center">
+                <span class="text-[10px] text-brand-blue block uppercase font-bold tracking-wider">Días de dispersión:</span>
+                <span class="text-xs font-extrabold text-brand-blue">Lunes • Miércoles • Viernes</span>
+              </div>
+            </div>
+            
+            <div class="mt-5 pt-4 border-t border-slate-100 flex items-center gap-2 text-[11px] font-medium text-slate-700 bg-slate-100 rounded-lg p-2.5">
+              <svg class="w-4 h-4 shrink-0 text-brand-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <span>El recurso ingresa previo a la compra.</span>
+            </div>
+          </div>
+
+          <!-- STEP 3 ANTICIPO -->
+          <div class="group bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-card-hover transition-all duration-300 relative flex flex-col justify-between">
+            <div class="absolute -top-3 left-6 px-3 py-0.5 bg-brand-blue text-white text-xs font-bold rounded-full uppercase tracking-wider shadow">
+              Paso 03
+            </div>
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-brand-blueLight text-brand-blue flex items-center justify-center mb-4 mt-2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              </div>
+              <h4 class="text-lg font-bold text-slate-900 font-display">Pago del Servicio y Facturación</h4>
+              <span class="inline-block text-[11px] font-semibold text-brand-blue bg-brand-blueLight px-2 py-0.5 rounded-md mt-1 mb-3">
+                Responsable: Gerente de Sucursal
+              </span>
+              <p class="text-slate-600 text-xs leading-relaxed">
+                Con el recurso recibido, el gerente realiza el pago y solicita de inmediato la <strong>Factura formal</strong> a nombre estricto de:
+              </p>
+              <div class="mt-3 p-2 bg-slate-900 text-white rounded-xl text-center shadow-inner">
+                <span class="text-[10px] text-slate-400 block uppercase font-mono tracking-wider">Razón Social:</span>
+                <span class="text-sm font-black tracking-wider text-green-400 font-mono">SAVAPRE</span>
+              </div>
+            </div>
+            
+            <div class="mt-5 pt-4 border-t border-slate-100 flex items-center gap-2 text-[11px] font-medium text-slate-600 bg-slate-100 rounded-lg p-2.5">
+              <svg class="w-4 h-4 shrink-0 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+              <span>El servicio debe facturarse sin excepciones.</span>
+            </div>
+          </div>
+
+          <!-- STEP 4 ANTICIPO -->
+          <div class="group bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-card-hover transition-all duration-300 relative flex flex-col justify-between border-2 border-brand-green/30">
+            <div class="absolute -top-3 left-6 px-3 py-0.5 bg-brand-green text-white text-xs font-bold rounded-full uppercase tracking-wider shadow">
+              Paso 04
+            </div>
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-brand-greenLight text-brand-green flex items-center justify-center mb-4 mt-2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2"/></svg>
+              </div>
+              <h4 class="text-lg font-bold text-slate-900 font-display">Comprobación del Anticipo</h4>
+              <span class="inline-block text-[11px] font-semibold text-brand-greenDark bg-brand-greenLight px-2 py-0.5 rounded-md mt-1 mb-3">
+                Responsable: Gerente de Sucursal
+              </span>
+              <p class="text-slate-600 text-xs leading-relaxed">
+                Dentro de la <strong>misma línea de correo</strong> se debe compartir el archivo <strong>PDF y XML con el 100% del monto</strong>.
+              </p>
+              
+              <div class="mt-3 p-2.5 bg-amber-50 border border-amber-300 rounded-xl">
+                <span class="text-[10px] text-amber-800 block uppercase font-black tracking-wider">Regla Fiscal Crítica:</span>
+                <span class="text-xs font-bold text-amber-900 leading-snug block mt-0.5">
+                  La comprobación debe quedar dentro del mismo mes en que se realizó el depósito.
+                </span>
+              </div>
+            </div>
+            
+            <div class="mt-5 pt-4 border-t border-slate-100 flex items-center gap-2 text-[11px] font-medium text-brand-blue bg-brand-blueLight rounded-lg p-2.5">
+              <svg class="w-4 h-4 shrink-0 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              <span>Asunto: Microperforado - &lt;Sucursal&gt;</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </main>
+
+    <!-- Two Column Breakdown: Requirements & Payment Schedule -->
+    <div class="p-6 sm:p-10 grid grid-cols-1 lg:grid-cols-12 gap-8 border-t border-slate-200">
+      
+      <!-- Left Column: Critical Requirements Alert Box (7 cols) -->
+      <div class="lg:col-span-7 bg-gradient-to-br from-slate-900 to-brand-blueDark rounded-2xl p-6 sm:p-8 text-white relative overflow-hidden shadow-lg">
+        <!-- Background decorative watermark -->
+        <div class="absolute -right-8 -bottom-8 opacity-10 pointer-events-none">
+          <svg class="w-64 h-64 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        </div>
+
+        <div class="flex items-center gap-2.5 text-brand-green font-bold text-xs uppercase tracking-wider mb-2">
+          <svg class="w-5 h-5 text-brand-green animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+          Zona Crítica para Confirmar el Proceso
+        </div>
+
+        <h3 class="text-xl sm:text-2xl font-black font-display tracking-tight text-white mb-2">
+          Reglas Obligatorias sin Excepción
+        </h3>
+        <p class="text-slate-300 text-xs sm:text-sm mb-5 leading-relaxed">
+          Para que el departamento administrativo valide reembolsos o libere y cierre anticipos, es indispensable acatar los siguientes 3 lineamientos:
+        </p>
+
+        <div class="space-y-3.5">
+          <!-- Requirement 1: Facturación sin excepciones -->
+          <div class="bg-white/10 backdrop-blur-md border border-white/15 rounded-xl p-3.5 sm:p-4 flex items-start gap-3.5 transition-all hover:bg-white/15">
+            <div class="w-8 h-8 rounded-lg bg-brand-green text-white font-bold flex items-center justify-center shrink-0 shadow mt-0.5">
+              ✓
+            </div>
+            <div>
+              <h4 class="font-bold text-sm sm:text-base text-white">1. El servicio se debe facturar sin excepciones</h4>
+              <p class="text-slate-300 text-xs mt-0.5 leading-relaxed">
+                Factura legal emitida estrictamente a nombre de <strong class="text-brand-green font-mono">SAVAPRE</strong>. Es forzoso adjuntar los <strong>dos archivos fiscales</strong>: versión legible en <strong class="text-white">PDF</strong> y archivo digital <strong class="text-white">XML</strong> que amparen el 100% del monto.
+              </p>
+            </div>
+          </div>
+
+          <!-- Requirement 2: Hilo único y Asunto -->
+          <div class="bg-white/10 backdrop-blur-md border border-white/15 rounded-xl p-3.5 sm:p-4 flex items-start gap-3.5 transition-all hover:bg-white/15">
+            <div class="w-8 h-8 rounded-lg bg-brand-green text-white font-bold flex items-center justify-center shrink-0 shadow mt-0.5">
+              ✓
+            </div>
+            <div>
+              <h4 class="font-bold text-sm sm:text-base text-white">2. Mantener una sola línea de Correo y Asunto específico</h4>
+              <p class="text-slate-300 text-xs mt-0.5 leading-relaxed">
+                Toda la comunicación debe darse en el mismo hilo de correo donde MKT otorgó el Vo.Bo. El asunto del correo debe redactarse exactamente con la estructura:
+                <span class="inline-block mt-1 font-mono text-[11px] sm:text-xs bg-slate-950/80 px-2.5 py-1 rounded-md text-green-300 font-bold border border-green-500/30">
+                  Microperforado - &lt;Sucursal&gt;
+                </span>
+              </p>
+            </div>
+          </div>
+
+          <!-- Requirement 3: Comprobación en el mismo mes -->
+          <div class="bg-white/10 backdrop-blur-md border border-white/15 rounded-xl p-3.5 sm:p-4 flex items-start gap-3.5 transition-all hover:bg-white/15">
+            <div class="w-8 h-8 rounded-lg bg-amber-400 text-slate-950 font-black flex items-center justify-center shrink-0 shadow mt-0.5">
+              !
+            </div>
+            <div>
+              <h4 class="font-bold text-sm sm:text-base text-amber-300">3. Comprobación de Anticipos dentro del mismo Mes</h4>
+              <p class="text-slate-300 text-xs mt-0.5 leading-relaxed">
+                En el caso de haber solicitado <strong>Anticipo</strong>, las comprobaciones (factura PDF y XML) <strong class="text-white underline decoration-amber-400">deben quedar registradas dentro del mismo mes calendario</strong> en el que se realizó el depósito administrativo.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right Column: Calendar & Payment Policy (5 cols) -->
+      <div class="lg:col-span-5 bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-sm flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-brand-blue font-bold text-xs uppercase tracking-wider">Políticas de Dispersión</span>
+            <span class="px-2.5 py-0.5 bg-brand-greenLight text-brand-greenDark font-bold text-xs rounded-full">
+              Días Fijos
+            </span>
+          </div>
+
+          <h3 class="text-xl font-extrabold text-slate-900 font-display">
+            Calendario de Pagos
+          </h3>
+          <p class="text-slate-500 text-xs mt-1">
+            Tanto reembolsos como dispersiones de anticipos se procesan administrativamente en un rango de <strong>3 a 4 días hábiles</strong>, aplicándose exclusivamente en los siguientes días:
+          </p>
+
+          <!-- Days badges -->
+          <div class="grid grid-cols-3 gap-3 my-6">
+            <!-- Lunes -->
+            <div class="p-3 bg-brand-blueLight border-2 border-brand-blue/30 rounded-xl text-center">
+              <span class="text-[10px] uppercase font-bold text-brand-blue block">Día 1</span>
+              <span class="text-base sm:text-lg font-black text-brand-blue font-display">Lunes</span>
+              <span class="text-[10px] text-slate-500 block mt-0.5">Dispersión</span>
+            </div>
+            <!-- Miércoles -->
+            <div class="p-3 bg-brand-greenLight border-2 border-brand-green/30 rounded-xl text-center">
+              <span class="text-[10px] uppercase font-bold text-brand-greenDark block">Día 2</span>
+              <span class="text-base sm:text-lg font-black text-brand-greenDark font-display">Miércoles</span>
+              <span class="text-[10px] text-slate-500 block mt-0.5">Dispersión</span>
+            </div>
+            <!-- Viernes -->
+            <div class="p-3 bg-brand-blueLight border-2 border-brand-blue/30 rounded-xl text-center">
+              <span class="text-[10px] uppercase font-bold text-brand-blue block">Día 3</span>
+              <span class="text-base sm:text-lg font-black text-brand-blue font-display">Viernes</span>
+              <span class="text-[10px] text-slate-500 block mt-0.5">Dispersión</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Note box -->
+        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-600 flex items-start gap-3">
+          <div class="w-6 h-6 rounded-full bg-slate-200 text-slate-700 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
+            i
+          </div>
+          <p class="leading-relaxed">
+            <strong>Recomendación Operativa:</strong> Envía tu solicitud o comprobación en horario matutino para asegurar su entrada en la corte bancaria más próxima.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="p-6 sm:p-8 bg-slate-900 text-white flex flex-col sm:flex-row items-center justify-between gap-6 border-t border-slate-800">
+      <div class="flex items-center gap-3">
+        <!-- Mini Logo -->
+        <div class="w-8 h-10 bg-brand-blue rounded-md p-0.5 flex flex-col justify-between shrink-0">
+          <div class="w-full h-full bg-brand-green rounded flex items-center justify-center">
+            <span class="text-white font-black text-xs">$</span>
+          </div>
+        </div>
+        <div>
+          <div class="font-display font-extrabold text-base tracking-tight">
+            <span>Sale</span><span class="text-brand-green">vale</span> <span class="text-slate-400 font-normal text-xs ml-1">| Mercadotecnia</span>
+          </div>
+          <p class="text-slate-400 text-[11px]">
+            Dirección de Mercadotecnia y Comunicación • Proceso de Reembolsos y Anticipos
+          </p>
+        </div>
+      </div>
+
+      <div class="text-center sm:text-right text-xs text-slate-400">
+        <p class="font-medium text-slate-300">¿Dudas con tu factura, anticipo o cotización?</p>
+        <p class="text-[11px] text-slate-500 mt-0.5">Contacta de inmediato a tu ejecutiva de Mercadotecnia asignada.</p>
+      </div>
+    </footer>
+
+  </div>
+
+  <script>
+    function switchModality(mode) {
+      const flowReembolso = document.getElementById('flowReembolso');
+      const flowAnticipo = document.getElementById('flowAnticipo');
+      const btnReembolso = document.getElementById('btnTabReembolso');
+      const btnAnticipo = document.getElementById('btnTabAnticipo');
+
+      if (mode === 'anticipo') {
+        flowReembolso.classList.add('hidden');
+        flowAnticipo.classList.remove('hidden');
+
+        btnAnticipo.className = 'px-5 py-2.5 rounded-xl font-display font-bold text-xs sm:text-sm transition-all shadow-sm bg-brand-green text-white';
+        btnReembolso.className = 'px-5 py-2.5 rounded-xl font-display font-bold text-xs sm:text-sm transition-all text-slate-700 hover:text-slate-900';
+      } else {
+        flowAnticipo.classList.add('hidden');
+        flowReembolso.classList.remove('hidden');
+
+        btnReembolso.className = 'px-5 py-2.5 rounded-xl font-display font-bold text-xs sm:text-sm transition-all shadow-sm bg-brand-blue text-white';
+        btnAnticipo.className = 'px-5 py-2.5 rounded-xl font-display font-bold text-xs sm:text-sm transition-all text-slate-700 hover:text-slate-900';
+      }
+    }
+  </script>
+
+</body>
+</html>
